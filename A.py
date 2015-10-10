@@ -1,15 +1,13 @@
-input = open('input.txt', 'r')
-A=[] 
-B=intinput.readlines() 
-n=int(B[0]) 
-A=A+list(map(int, B[1].split())) 
-for i in range (n):
-    D=A[i]
-    for j in range(i+1,n):
-        C=A[j]
-        if D==C:
-            z=D
-output = open('output.txt', 'w')
-print(z,file=output)
-input.close()
+intinput=open('input.txt','r')
+output=open('output.txt','w')
+A=[]
+B=intinput.readlines()
+N=int(B[0])
+A=A+list(map(int, B[1].split()))
+b=0
+for elem in A:
+    if A.count(elem)==2:
+        b=elem
+print(b,file=output)
+intinput.close()
 output.close()
