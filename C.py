@@ -1,15 +1,18 @@
-n=int(input())
-min=1000000
-A=input().split()
+intinput=open('input.txt','r')
+output=open('output.txt','w')
+B=intinput.readlines()
+N=int(B[0])
+A=list(map(int,B[1].split()))
+min=None
 for i in range(len(A)):
-    A[i]=int(A[i])
-for i in range (len(A)):
-    B=A[i]
-    for j in range(i+1,len(A)):
-        C=A[j]
-        if B<0 and C>0 and B==-C:
-            z=j-i
-            if z<min:
-                min=z
-print(min)                
-            
+       for j in range(len(A)):
+           if i!=j:
+               if (A[i]<0) and (i<j) and (A[i]==-A[j]):
+                   if min==None or ((j-i)<min):
+                       min=j-i
+if min!=None:
+    print(min,file=output)
+else:
+    print(0,file=output)
+intinput.close()
+output.close()
