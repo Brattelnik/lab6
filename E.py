@@ -38,3 +38,14 @@
 | 3 1 100 |            |
 +---------+------------+
 '''
+I=open('input.txt')
+O=open('output.txt','w')
+N, K = tuple([int(i) for i in I.readline().split()])
+goose = [0 for i in range(N)]
+for i in range(K):
+    d,c,m = tuple([int(j) for j in I.readline().split()])
+    goose[d-1]-=m
+    goose[c-1]+=m
+O.write(' '.join([str(i) for i in goose]))
+O.close()
+I.close()

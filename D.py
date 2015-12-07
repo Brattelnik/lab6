@@ -25,3 +25,9 @@
 | 6 4 6 3 |           |
 +---------+-----------+
 '''
+I=open('input.txt')
+O=open('output.txt','w')
+k, n = tuple([int(i) for i in I.readline().split()])
+O.write(' '.join([str(min(l)) for l in zip(*[[int(j) for j in I.readline().split()] for i in range(k)])]))
+O.close()
+I.close()

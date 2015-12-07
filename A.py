@@ -1,13 +1,12 @@
-intinput=open('input.txt','r')
-output=open('output.txt','w')
-A=[]
-B=intinput.readlines()
-N=int(B[0])
-A=A+list(map(int, B[1].split()))
-b=0
-for elem in A:
-    if A.count(elem)==2:
-        b=elem
-print(b,file=output)
-intinput.close()
-output.close()
+Irga=open('input.txt')
+Orex=open('output.txt','w')
+n=int(Irga.readline())
+mama=set()
+for i in Irga.readline().split():
+    if i not in mama:
+        mama.add(i)
+    else:
+        Orex.write(i)
+        Orex.close()
+        I.close()
+        exit()
