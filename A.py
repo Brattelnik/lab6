@@ -1,12 +1,12 @@
-Irga=open('input.txt')
-Orex=open('output.txt','w')
-n=int(Irga.readline())
-mama=set()
-for i in Irga.readline().split():
-    if i not in mama:
-        mama.add(i)
+I=open('input.txt')
+O=open('output.txt','w')
+n=int(I.readline())
+has=set()
+for i in I.readline().split():
+    if i not in has:
+        has.add(i)
     else:
-        Orex.write(i)
-        Orex.close()
-        Irga.close()
+        O.write(i)
+        O.close()
+        I.close()
         exit()
