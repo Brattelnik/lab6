@@ -8,5 +8,5 @@ for i in Irga.readline().split():
     else:
         Orex.write(i)
         Orex.close()
-        I.close()
+        Irga.close()
         exit()
